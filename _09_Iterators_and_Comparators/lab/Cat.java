@@ -1,6 +1,6 @@
 // Искам котките да могат да се сравняват
 // Казвам изрично, че тези обекти от този клас са сравними
-public class Cat {
+public class Cat implements Comparable<Cat> {
 
     private String name;
     private int age;
