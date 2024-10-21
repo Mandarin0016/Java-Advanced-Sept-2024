@@ -14,6 +14,6 @@ public class _09_SerializeCustomObject {
         FileInputStream fis = new FileInputStream("C:\\Softuni\\Java-Advanced-Sept-2024\\_04_Streams_Files_and_Directories\\lab\\resources\\demo");
         ObjectInputStream ois = new ObjectInputStream(fis);
 
-        Person person = (Person) ois.readObject();
+        Human person = (Human) ois.readObject();
     }
 }
