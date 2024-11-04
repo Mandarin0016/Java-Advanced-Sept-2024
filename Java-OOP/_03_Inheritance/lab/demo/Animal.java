@@ -1,6 +1,6 @@
 package demo;
 
-public class Animal {
+public abstract class Animal {
 
     private String name;
     protected int age;
