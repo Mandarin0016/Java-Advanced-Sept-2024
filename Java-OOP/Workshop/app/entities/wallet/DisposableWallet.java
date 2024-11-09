@@ -33,6 +33,6 @@ public class DisposableWallet extends Wallet {
         stringBuilder.append(System.lineSeparator());
         stringBuilder.append("Max withdrawals: ").append(WITHDRAWS_LIMIT).append(System.lineSeparator());
         stringBuilder.append("Current withdrawals: ").append(withdrawAttempts);
-        return stringBuilder.toString().trim();
+        return stringBuilder.toString();
     }
 }

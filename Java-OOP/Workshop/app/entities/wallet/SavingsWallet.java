@@ -34,6 +34,6 @@ public class SavingsWallet extends Wallet {
         long seconds = Duration.between(LocalDateTime.now(), savingPeriodEnd).toSeconds();
         stringBuilder.append(System.lineSeparator());
         stringBuilder.append("Saving period ends within: ").append(Math.max(0, seconds)).append(" seconds");
-        return stringBuilder.toString().trim();
+        return stringBuilder.toString();
     }
 }
