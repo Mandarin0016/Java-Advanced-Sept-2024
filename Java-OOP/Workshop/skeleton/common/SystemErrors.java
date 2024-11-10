@@ -2,6 +2,10 @@ package common;
 
 public final class SystemErrors {
 
+    public static final String INVALID_USERNAME = "Error: Invalid username, make sure the length is bigger than 4 and contains at least 1 digit.";
+
+    public static final String INVALID_PASSWORD = "Error: Invalid password, make sure the length is exactly 6 and contains only digits.";
+
     public static final String USER_ALREADY_LOGGED_IN = "Error: User %s is already logged in.";
 
     public static final String INCORRECT_LOGIN_CREDENTIALS = "Error: Incorrect username/password.";
@@ -20,7 +24,7 @@ public final class SystemErrors {
 
     public static final String INCORRECT_WALLET_TYPE = "Error: Invalid wallet type. Please choose from [Standard, Savings, Disposable].";
 
-    public static final String STANDARD_WALLET_COUNT_LIMIT_REACHED = "Error: Maximum limit of standard wallets reached. You are allowed to have only %d standard wallets.";
+    public static final String STANDARD_WALLET_COUNT_LIMIT_REACHED = "Error: Maximum limit of standard wallets reached. You are allowed to have only 1 standard wallets.";
 
     public static final String WALLET_NOT_ASSOCIATED_WITH_THIS_USER = "Error: User %s is not associated with such wallet.";
 

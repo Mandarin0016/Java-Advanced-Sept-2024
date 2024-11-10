@@ -2,8 +2,6 @@ package core;
 
 import services.WalletService;
 import services.UserService;
-import services.imp.UserServiceImp;
-import services.imp.WalletServiceImpl;
 
 import java.util.Arrays;
 import java.util.Currency;
@@ -19,9 +17,10 @@ public class Engine implements Runnable {
 
     public Engine() {
         this.scanner = new Scanner(System.in);
-        this.sessionManager = new SessionManagerImpl();
-        this.userService = new UserServiceImp(sessionManager);
-        this.walletService = new WalletServiceImpl(sessionManager);
+        // TODO: Make sure these fields are initialized
+        // this.sessionManager = new UserSessionManager();
+        // this.userService = new UserServiceImp(...);
+        // this.walletService = new WalletServiceImpl(...);
     }
 
     @Override
