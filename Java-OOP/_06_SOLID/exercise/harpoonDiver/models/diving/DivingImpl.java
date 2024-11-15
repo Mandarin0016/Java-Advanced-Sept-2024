@@ -16,9 +16,11 @@ public class DivingImpl implements Diving {
                 if (seaCreatures.isEmpty()) {
                     break;
                 }
+                // TODO fix me!!!
                 for (String seaCreature : seaCreatures) {
                     diver.shoot();
                     divingSite.getSeaCreatures().remove(seaCreature);
+                    diver.getSeaCatch().getSeaCreatures().add(seaCreature);
                     if (!diver.canDive()) {
                         break;
                     }
