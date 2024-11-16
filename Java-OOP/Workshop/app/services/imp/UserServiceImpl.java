@@ -32,8 +32,6 @@ public class UserServiceImpl implements UserService {
             throw new IllegalStateException(USER_ALREADY_LOGGED_IN.formatted(activeUser.getUsername()));
         }
 
-        // password -> hash
-
         User user = userRepository.getAll().stream()
                 .filter(u -> u.getUsername().equals(username) && u.getPassword().equals(password))
                 .findFirst()
@@ -52,8 +50,6 @@ public class UserServiceImpl implements UserService {
         if (isUsernameAlreadyExist) {
             throw new IllegalArgumentException(SUCH_USERNAME_ALREADY_EXIST.formatted(username));
         }
-
-        // password -> hash
 
         User user = new User(username, password);
         userRepository.save(user.getId(), user);
