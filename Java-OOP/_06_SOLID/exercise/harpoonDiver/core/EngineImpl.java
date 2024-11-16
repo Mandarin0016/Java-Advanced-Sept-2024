@@ -8,15 +8,15 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class EngineImpl implements Engine{
+public class EngineImpl implements Engine {
+
     private final Controller controller;
     private final Scanner scanner;
 
     public EngineImpl(Controller controller) {
-        this.controller = controller; //TODO implement first ControllerImpl class
+        this.controller = controller;
         this.scanner = new Scanner(System.in);
     }
-
 
 
     @Override
@@ -72,30 +72,32 @@ public class EngineImpl implements Engine{
 
 
     private String addDiver(String[] data) {
-        // TODO
-        return null;
+
+        return controller.addDiver(data[0], data[1]);
     }
+
     private String addDivingSite(String[] data) {
-        // TODO
+
         String siteName = data[0];
         String[] seaCreature = Arrays.stream(data).skip(1).toArray(String[]::new);
-        return null;
+        return controller.addDivingSite(siteName, seaCreature);
     }
+
     private String removeDiver(String[] data) {
-        // TODO
-        return null;
+
+        return controller.removeDiver(data[0]);
     }
 
 
     private String startDiving(String[] data) {
-        // TODO
-        return null;
-    }
-    private String getStatistics() {
-        // TODO
-        return null;
+
+        return controller.startDiving(data[0]);
     }
 
+    private String getStatistics() {
+
+        return controller.getStatistics();
+    }
 
 
 }
