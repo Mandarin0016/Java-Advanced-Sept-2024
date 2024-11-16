@@ -2,6 +2,8 @@ package core;
 
 import services.WalletService;
 import services.UserService;
+import services.imp.UserServiceImpl;
+import services.imp.WalletServiceImpl;
 
 import java.util.Arrays;
 import java.util.Currency;
@@ -11,16 +13,15 @@ import java.util.UUID;
 public class Engine implements Runnable {
 
     private Scanner scanner;
-    private SessionManager sessionManager;
+    private UserSessionManager sessionManager;
     private UserService userService;
     private WalletService walletService;
 
     public Engine() {
         this.scanner = new Scanner(System.in);
-        // TODO: Make sure these fields are initialized
-        // this.sessionManager = new UserSessionManager();
-        // this.userService = new UserServiceImp(...);
-        // this.walletService = new WalletServiceImpl(...);
+        this.sessionManager = new UserSessionManager();
+        this.userService = new UserServiceImpl(sessionManager);
+        this.walletService = new WalletServiceImpl(sessionManager);
     }
 
     @Override

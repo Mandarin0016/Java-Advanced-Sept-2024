@@ -2,7 +2,7 @@ package common;
 
 public final class LogMessages {
 
-    public static final String SUCCESSFULLY_REGISTERED = "[LOG] New user \"%s\" registered successfully and logged in.";
+    public static final String SUCCESSFULLY_REGISTERED = "[LOG] New user \"%s\" registered successfully.";
 
     public static final String SUCCESSFULLY_LOGGED_IN = "[LOG] User %s successfully logged in.";
 
